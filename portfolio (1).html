@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イマドキインフォ | AIとドローンで、現場をスマートに。</title>
+<meta name="description" content="名古屋を拠点に、ドローン点検とAIコンテンツ自動化を手がける個人事業主イマドキインフォのポートフォリオサイト。飛行業務の下請け対応からAI副業システムの構築支援まで。">
+<meta property="og:title" content="イマドキインフォ | AIとドローンで、現場をスマートに。">
+<meta property="og:description" content="名古屋を拠点に、ドローン点検とAIコンテンツ自動化を手がける個人事業主です。飛行業務の下請け対応からAI副業システムの構築支援まで。">
+<meta property="og:image" content="https://masashihibino.github.io/masashihibino-my-portfolio/ogp.svg.png">
+<meta property="og:url" content="https://masashihibino.github.io/masashihibino-my-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="イマドキインフォ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="イマドキインフォ | AIとドローンで、現場をスマートに。">
+<meta name="twitter:description" content="名古屋を拠点に、ドローン点検とAIコンテンツ自動化を手がける個人事業主です。">
+<meta name="twitter:image" content="https://masashihibino.github.io/masashihibino-my-portfolio/ogp.svg.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0D0D1A;
+    --bg2:       #111122;
+    --accent:    #00B4D8;
+    --accent2:   #0077A8;
+    --white:     #FFFFFF;
+    --gray:      #A0A0B0;
+    --gray2:     #2A2A3A;
+    --font:      'Noto Sans JP', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(13,13,26,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,180,216,0.15);
+  }
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 10% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,180,216,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    max-width: 800px;
+    margin-bottom: 24px;
+  }
+  .hero-title span { color: var(--accent); }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--gray);
+    max-width: 520px;
+    margin-bottom: 48px;
+    font-weight: 300;
+    line-height: 1.9;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: background .2s, transform .2s;
+    width: fit-content;
+    align-self: flex-start;
+  }
+  .hero-cta:hover { background: #00d4fc; transform: translateY(-2px); }
+
+  /* ── SECTION BASE ── */
+  section { padding: 96px 40px; }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 700;
+    margin-bottom: 56px;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--bg2); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    max-width: 1000px;
+  }
+  .service-card {
+    background: var(--bg);
+    padding: 48px 40px;
+    border: 1px solid var(--gray2);
+    transition: border-color .2s;
+  }
+  .service-card:hover { border-color: var(--accent); }
+  .service-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .service-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+  .service-desc {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .service-desc li { list-style: none; padding: 4px 0; }
+  .service-desc li::before { content: '— '; color: var(--accent); }
+
+  /* ── ACHIEVEMENTS ── */
+  #achievements { background: var(--bg); }
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin-bottom: 48px;
+  }
+  .achievement-card {
+    background: var(--bg2);
+    border: 1px solid var(--gray2);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .achievement-num {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+  .achievement-label {
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .achievement-list {
+    max-width: 640px;
+    list-style: none;
+  }
+  .achievement-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray2);
+    font-size: 14px;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .achievement-list li::before {
+    content: '✔';
+    color: var(--accent);
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  /* ── MENU ── */
+  #menu { background: var(--bg2); }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1000px;
+  }
+  .menu-block { }
+  .menu-block-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gray2);
+    letter-spacing: 0.05em;
+  }
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray2);
+  }
+  .menu-item-name { font-size: 14px; color: var(--white); }
+  .menu-item-price {
+    font-size: 13px;
+    color: var(--gray);
+    white-space: nowrap;
+    margin-left: 16px;
+  }
+  .menu-note {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg); text-align: center; }
+  .contact-inner { max-width: 560px; margin: 0 auto; }
+  .contact-lead {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 48px;
+    line-height: 1.9;
+  }
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 40px;
+    border: 1px solid var(--gray2);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color .2s, background .2s;
+  }
+  .contact-link:hover {
+    border-color: var(--accent);
+    background: rgba(0,180,216,0.06);
+  }
+  .contact-link-label { color: var(--gray); font-size: 12px; margin-left: auto; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 32px 40px;
+    border-top: 1px solid var(--gray2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo { font-size: 13px; color: var(--accent); font-weight: 700; }
+  .footer-copy { font-size: 12px; color: var(--gray); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 48px; height: 2px;
+    background: var(--accent);
+    margin-bottom: 40px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    #hero { padding: 120px 20px 60px; }
+    section { padding: 72px 20px; }
+    .services-grid,
+    .menu-grid { grid-template-columns: 1fr; }
+    .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">イマドキインフォ</a>
+  <ul class="nav-links">
+    <li><a href="#services">できること</a></li>
+    <li><a href="#achievements">実績</a></li>
+    <li><a href="#menu">メニュー</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-label">Nagoya-based · Drone × AI</p>
+  <h1 class="hero-title">AIとドローンで、<br><span>現場をスマートに。</span></h1>
+  <p class="hero-sub">名古屋を拠点に、ドローン点検とAIコンテンツ自動化を手がける個人事業主です。飛行業務の下請け対応から、AI副業システムの構築支援まで。</p>
+  <a href="#contact" class="hero-cta">お問い合わせはこちら →</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="section-label">Services</p>
+  <h2 class="section-title">できること</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🚁</span>
+      <p class="service-name">ドローン点検・飛行業務</p>
+      <ul class="service-desc">
+        <li>DJI Mini 4 Pro による空撮・外壁確認飛行</li>
+        <li>対応エリア：名古屋市・愛知県全域</li>
+        <li>二等無人航空機操縦士 取得予定</li>
+        <li>赤外線点検会社との連携による診断対応も可</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🤖</span>
+      <p class="service-name">AIコンテンツ自動化</p>
+      <ul class="service-desc">
+        <li>Claude APIを活用したnote記事の自動生成・投稿</li>
+        <li>5エージェント構成のAIシステムを自社開発・運用中</li>
+        <li>AI副業の実践ノウハウをnoteマガジンで公開中</li>
+        <li>コンテンツ自動化システムの構築支援も対応</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <p class="section-label">Track Record</p>
+  <h2 class="section-title">実績</h2>
+  <div class="achievements-grid">
+    <div class="achievement-card">
+      <span class="achievement-num">20</span>
+      <p class="achievement-label">note記事<br>自動生成システム構築</p>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-num">5</span>
+      <p class="achievement-label">AIエージェント<br>構成・自社開発</p>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-num">¥498</span>
+      <p class="achievement-label">AIマガジン<br>販売中</p>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-num">積算中</span>
+      <p class="achievement-label">ドローン飛行ログ<br>庄内川にて練習中</p>
+    </div>
+  </div>
+  <ul class="achievement-list">
+    <li>note記事20本の自動生成スケジューラー稼働中（月・水・金 9:00 AM）</li>
+    <li>AIマガジン販売中（有料記事構成：記事1〜5無料、6〜20有料）</li>
+    <li>DJI Mini 4 Pro による屋外飛行ログ記録中</li>
+    <li>青色申告・個人事業主として運営</li>
+    <li>SKY WALKERセミナー参加予定（2025年7月）</li>
+  </ul>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <p class="section-label">Menu &amp; Pricing</p>
+  <h2 class="section-title">対応メニュー・料金</h2>
+  <div class="menu-grid">
+    <div class="menu-block">
+      <p class="menu-block-title">🚁 ドローン飛行業務</p>
+      <div class="menu-item">
+        <span class="menu-item-name">空撮・外壁確認飛行</span>
+        <span class="menu-item-price">要相談</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">赤外線点検（連携先対応）</span>
+        <span class="menu-item-price">要相談</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">飛行業務の下請け対応</span>
+        <span class="menu-item-price">要相談</span>
+      </div>
+      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等免許取得後、対応範囲拡大予定</p>
+    </div>
+    <div class="menu-block">
+      <p class="menu-block-title">🤖 AIコンテンツ支援</p>
+      <div class="menu-item">
+        <span class="menu-item-name">記事自動化システム構築</span>
+        <span class="menu-item-price">要相談</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">note運用サポート</span>
+        <span class="menu-item-price">要相談</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">AIマガジン（実践ノウハウ）</span>
+        <span class="menu-item-price">¥498〜</span>
+      </div>
+      <p class="menu-note">※まずはXのDMよりお気軽にご相談ください</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">お問い合わせ</h2>
+    <div class="divider" style="margin: 0 auto 32px;"></div>
+    <p class="contact-lead">ドローン飛行業務の下請け・AI副業支援・その他お仕事のご相談は、XのDMまたはnoteよりお気軽にどうぞ。</p>
+    <div class="contact-links">
+      <a class="contact-link" href="https://forms.gle/efCvjjiiRdZYe9wv9" target="_blank">
+        📋 お問い合わせフォーム
+        <span class="contact-link-label">最短返信</span>
+      </a>
+      <a class="contact-link" href="https://x.com/m_h8994" target="_blank">
+        𝕏 Twitter DM
+        <span class="contact-link-label">@m_h8994</span>
+      </a>
+      <a class="contact-link" href="https://note.com/dreamy_shrew7682" target="_blank">
+        📝 note
+        <span class="contact-link-label">イマドキインフォ</span>
+      </a>
+      <a class="contact-link" href="https://note.com/dreamy_shrew7682/m/mc3ea9136803c" target="_blank">
+        📚 AIマガジンを読む
+        <span class="contact-link-label">¥498〜</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">イマドキインフォ</p>
+  <p class="footer-copy">© 2025 イマドキインフォ. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
