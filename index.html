@@ -140,13 +140,13 @@
   #services { background: var(--bg2); }
   .services-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
-    max-width: 1000px;
+    max-width: 1200px;
   }
   .service-card {
     background: var(--bg);
-    padding: 48px 40px;
+    padding: 40px 32px;
     border: 1px solid var(--gray2);
     transition: border-color .2s;
   }
@@ -240,13 +240,11 @@
     transition: border-color .2s;
   }
   .gallery-card:hover { border-color: var(--accent); }
-  .gallery-card a { display: block; }
   .gallery-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
-    cursor: zoom-in;
   }
   .gallery-card-body { padding: 16px 18px; }
   .gallery-card-title {
@@ -355,6 +353,9 @@
   }
 
   /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
   @media (max-width: 768px) {
     nav { padding: 16px 20px; }
     .nav-links { display: none; }
@@ -384,7 +385,7 @@
 <section id="hero">
   <p class="hero-label">Nagoya-based · Drone × AI</p>
   <h1 class="hero-title">AIとドローンで、<br><span>現場をスマートに。</span></h1>
-  <p class="hero-sub">名古屋を拠点に、ドローン点検とAIコンテンツ自動化を手がける個人事業主です。飛行業務の下請け対応から、AI副業システムの構築支援まで。</p>
+  <p class="hero-sub">名古屋を拠点に、ドローンと赤外線カメラによる点検・診断、AIコンテンツ自動化を手がける個人事業主です。飛行業務の下請け対応から、太陽光パネル・外壁の赤外線点検まで。</p>
   <a href="#contact" class="hero-cta">お問い合わせはこちら →</a>
 </section>
 
@@ -399,9 +400,20 @@
       <ul class="service-desc">
         <li>DJI Mini 4 Pro による空撮・外壁確認飛行</li>
         <li>対応エリア：名古屋市・愛知県全域</li>
-        <li>二等無人航空機操縦士 取得済み（基本・昼間・目視内）</li>
+        <li>二等無人航空機操縦士 技能証明取得済み（目視外・夜間 限定解除）</li>
         <li>賠償責任保険（SORAPASS care）加入済み</li>
         <li>赤外線点検会社との連携による診断対応も可</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🌡️</span>
+      <p class="service-name">赤外線点検・診断<span style="font-size:12px;color:var(--accent);margin-left:8px;">準備中・ご相談受付</span></p>
+      <ul class="service-desc">
+        <li>太陽光パネルの赤外線点検（ホットスポット等の異常検出）</li>
+        <li>建物外壁の赤外線診断（浮き・剥離の調査）</li>
+        <li>第二種電気工事士として、点検から補修までの一貫対応</li>
+        <li>地上用赤外線カメラ保有、ドローン・地上の両面から調査</li>
+        <li>赤外線建物診断技能師 講習修了・2026年10月受験</li>
       </ul>
     </div>
     <div class="service-card">
@@ -444,37 +456,40 @@
     <li>AIマガジン販売中（有料記事構成：記事1〜5無料、6〜20有料）</li>
     <li>DJI Mini 4 Pro による屋外飛行ログ記録中（累計64回・11.3時間・39.9km）</li>
     <li>古宇利大橋・郡上八幡城での空撮実績あり</li>
-    <li>二等無人航空機操縦士 修了証明取得済み（2026年8月10日）</li>
+    <li>2026年8月 屋号「イマドキインフォ」で開業（青色申告）</li>
+    <li>二等無人航空機操縦士 技能証明取得（目視外・夜間 限定解除、2026年9月 免状交付）</li>
+    <li>第二種電気工事士 保有</li>
+    <li>赤外線建物診断技能師 講習修了（2026年9月）・2026年10月受験</li>
+    <li>地上用赤外線カメラ（HIKMICRO）導入済み</li>
     <li>賠償責任保険（SORAPASS care、損保ジャパン）加入済み</li>
-    <li>青色申告・個人事業主として運営</li>
   </ul>
 
   <!-- 空撮ギャラリー -->
   <p class="gallery-heading">空撮実績ギャラリー</p>
   <div class="gallery-grid">
     <div class="gallery-card">
-      <a href="img/chirihama-beach.jpeg" target="_blank" rel="noopener"><img src="img/chirihama-beach.jpeg" alt="千里浜なぎさドライブウェイ 空撮"></a>
+      <img src="img/chirihama-beach.jpeg" alt="千里浜なぎさドライブウェイ 空撮">
       <div class="gallery-card-body">
         <p class="gallery-card-title">千里浜なぎさドライブウェイ（石川県）</p>
         <p class="gallery-card-desc">日本で唯一、車で砂浜を走行できる海岸線を空撮</p>
       </div>
     </div>
     <div class="gallery-card">
-      <a href="img/shonai-river.jpeg" target="_blank" rel="noopener"><img src="img/shonai-river.jpeg" alt="庄内川 新幹線橋梁 空撮"></a>
+      <img src="img/shonai-river.jpeg" alt="庄内川 新幹線橋梁 空撮">
       <div class="gallery-card-body">
         <p class="gallery-card-title">庄内川（名古屋市）</p>
         <p class="gallery-card-desc">新幹線・在来線の橋梁が交差する都市河川を空撮</p>
       </div>
     </div>
     <div class="gallery-card">
-      <a href="img/kouri-bridge.jpeg" target="_blank" rel="noopener"><img src="img/kouri-bridge.jpeg" alt="古宇利大橋 空撮"></a>
+      <img src="img/kouri-bridge.jpeg" alt="古宇利大橋 空撮">
       <div class="gallery-card-body">
         <p class="gallery-card-title">古宇利大橋（沖縄県）</p>
         <p class="gallery-card-desc">エメラルドグリーンの海に架かる絶景橋を空撮</p>
       </div>
     </div>
     <div class="gallery-card">
-      <a href="img/gujo-hachiman-castle.jpeg" target="_blank" rel="noopener"><img src="img/gujo-hachiman-castle.jpeg" alt="郡上八幡城 朝焼け 空撮"></a>
+      <img src="img/gujo-hachiman-castle.jpeg" alt="郡上八幡城 朝焼け 空撮">
       <div class="gallery-card-body">
         <p class="gallery-card-title">郡上八幡城（岐阜県）</p>
         <p class="gallery-card-desc">朝日を背景に、山城と城下町を一望する構図で空撮</p>
@@ -502,7 +517,15 @@
         <span class="menu-item-name">飛行業務の下請け対応</span>
         <span class="menu-item-price">要相談</span>
       </div>
-      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士取得済み・賠償責任保険加入済み</p>
+      <div class="menu-item">
+        <span class="menu-item-name">太陽光パネル赤外線点検（準備中）</span>
+        <span class="menu-item-price">ご相談受付</span>
+      </div>
+      <div class="menu-item">
+        <span class="menu-item-name">外壁赤外線診断（準備中）</span>
+        <span class="menu-item-price">ご相談受付</span>
+      </div>
+      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士・第二種電気工事士 保有／賠償責任保険加入済み</p>
     </div>
     <div class="menu-block">
       <p class="menu-block-title">🤖 AIコンテンツ支援</p>
@@ -529,7 +552,7 @@
     <p class="section-label">Contact</p>
     <h2 class="section-title">お問い合わせ</h2>
     <div class="divider" style="margin: 0 auto 32px;"></div>
-    <p class="contact-lead">ドローン飛行業務の下請け・AI副業支援・その他お仕事のご相談は、XのDMまたはnoteよりお気軽にどうぞ。</p>
+    <p class="contact-lead">ドローン飛行業務の下請け・赤外線点検・AI副業支援・その他お仕事のご相談は、XのDMまたはnoteよりお気軽にどうぞ。</p>
     <div class="contact-links">
       <a class="contact-link" href="https://x.com/m_h8994" target="_blank">
         𝕏 Twitter DM
