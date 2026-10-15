@@ -334,6 +334,11 @@
   }
   .contact-link-label { color: var(--gray); font-size: 12px; margin-left: auto; }
 
+  /* ── LICENSE ── */
+  .license-card { max-width: 520px; margin: 40px 0 56px; }
+  .license-card img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--gray2); display: block; }
+  .license-card figcaption { margin-top: 10px; font-size: 12px; color: var(--gray); line-height: 1.6; }
+
   /* ── FOOTER ── */
   footer {
     padding: 32px 40px;
@@ -344,6 +349,8 @@
   }
   .footer-logo { font-size: 13px; color: var(--accent); font-weight: 700; }
   .footer-copy { font-size: 12px; color: var(--gray); }
+  .footer-cert { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--gray); line-height: 1.5; }
+  .footer-cert img { height: 72px; width: auto; }
 
   /* ── DIVIDER ── */
   .divider {
@@ -402,6 +409,7 @@
         <li>対応エリア：名古屋市・愛知県全域</li>
         <li>二等無人航空機操縦士 技能証明取得済み（目視外・夜間 限定解除）</li>
         <li>賠償責任保険（SORAPASS care）加入済み</li>
+        <li>事業継続力強化計画 認定事業者（中部経済産業局）</li>
         <li>赤外線点検会社との連携による診断対応も可</li>
       </ul>
     </div>
@@ -457,12 +465,19 @@
     <li>DJI Mini 4 Pro による屋外飛行ログ記録中（累計64回・11.3時間・39.9km）</li>
     <li>古宇利大橋・郡上八幡城での空撮実績あり</li>
     <li>2026年8月 屋号「イマドキインフォ」で開業（青色申告）</li>
+    <li>事業継続力強化計画 認定取得（2026年10月 中部経済産業局／2026中部継強単認第786号）</li>
     <li>二等無人航空機操縦士 技能証明取得（目視外・夜間 限定解除、2026年9月 免状交付）</li>
     <li>第二種電気工事士 保有</li>
     <li>赤外線建物診断技能師 講習修了（2026年9月）・2026年10月受験</li>
     <li>地上用赤外線カメラ（HIKMICRO）導入済み</li>
     <li>賠償責任保険（SORAPASS care、損保ジャパン）加入済み</li>
   </ul>
+
+  <!-- 資格証明 -->
+  <figure class="license-card">
+    <img src="license.jpg" alt="二等無人航空機操縦士 技能証明書（個人情報は黒塗り）" loading="lazy">
+    <figcaption>二等無人航空機操縦士 技能証明書（マルチ・25kg未満／夜間・目視外 限定解除）<br>※個人情報は黒塗りしています</figcaption>
+  </figure>
 
   <!-- 空撮ギャラリー -->
   <p class="gallery-heading">空撮実績ギャラリー</p>
@@ -525,7 +540,7 @@
         <span class="menu-item-name">外壁赤外線診断（準備中）</span>
         <span class="menu-item-price">ご相談受付</span>
       </div>
-      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士・第二種電気工事士 保有／賠償責任保険加入済み</p>
+      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士・第二種電気工事士 保有／賠償責任保険加入済み<br>※事業継続力強化計画 認定事業者</p>
     </div>
     <div class="menu-block">
       <p class="menu-block-title">🤖 AIコンテンツ支援</p>
@@ -573,6 +588,10 @@
 <!-- FOOTER -->
 <footer>
   <p class="footer-logo">イマドキインフォ</p>
+  <div class="footer-cert">
+    <img src="keizokuryoku-logo.jpg" alt="事業継続力強化計画 認定ロゴマーク" onerror="this.style.display='none'">
+    <span>事業継続力強化計画 認定事業者<br>2026中部継強単認第786号</span>
+  </div>
   <p class="footer-copy">© 2026 イマドキインフォ. All rights reserved.</p>
 </footer>
 
