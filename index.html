@@ -359,6 +359,25 @@
     margin-bottom: 40px;
   }
 
+
+  /* ── PARTNERS ── */
+  .nav-links a.nav-partner { color: var(--accent); font-weight: 700; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-cta.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .hero-cta.ghost:hover { background: rgba(0,180,216,0.1); }
+  #partners { background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); border-top: 1px solid rgba(0,180,216,0.25); }
+  .partners-wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; max-width: 1200px; align-items: center; }
+  .partners-cover { display: block; border: 1px solid var(--gray2); border-radius: 6px; overflow: hidden; transition: border-color .2s; }
+  .partners-cover:hover { border-color: var(--accent); }
+  .partners-cover img { display: block; width: 100%; height: auto; }
+  .partners-lead { color: var(--gray); font-size: 15px; line-height: 1.9; margin-bottom: 24px; }
+  .partners-points { list-style: none; margin-bottom: 32px; }
+  .partners-points li { padding: 10px 0; border-bottom: 1px solid var(--gray2); font-size: 14px; }
+  .partners-points li strong { color: var(--white); display: block; font-size: 15px; }
+  .partners-points li span { color: var(--gray); }
+  .partners-meta { margin-top: 16px; font-size: 12px; color: var(--gray); }
+  @media (max-width: 900px) { .partners-wrap { grid-template-columns: 1fr; gap: 32px; } }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     .services-grid { grid-template-columns: 1fr 1fr; }
@@ -381,6 +400,7 @@
 <nav>
   <a class="nav-logo" href="#">イマドキインフォ</a>
   <ul class="nav-links">
+    <li><a href="#partners" class="nav-partner">協力会社様へ</a></li>
     <li><a href="#services">できること</a></li>
     <li><a href="#achievements">実績</a></li>
     <li><a href="#menu">メニュー</a></li>
@@ -393,7 +413,34 @@
   <p class="hero-label">Nagoya-based · Drone × AI</p>
   <h1 class="hero-title">AIとドローンで、<br><span>現場をスマートに。</span></h1>
   <p class="hero-sub">名古屋を拠点に、ドローンと赤外線カメラによる点検・診断、AIコンテンツ自動化を手がける個人事業主です。飛行業務の下請け対応から、太陽光パネル・外壁の赤外線点検まで。</p>
-  <a href="#contact" class="hero-cta">お問い合わせはこちら →</a>
+  <div class="hero-actions">
+    <a href="#contact" class="hero-cta">お問い合わせはこちら →</a>
+    <a href="#partners" class="hero-cta ghost">協力会社様向け 営業資料</a>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <p class="section-label">For Partners</p>
+  <h2 class="section-title">協力会社様へ</h2>
+  <div class="partners-wrap">
+    <a class="partners-cover" href="sales-deck.pdf" target="_blank" rel="noopener">
+      <img src="partners-cover.jpg" alt="営業資料「外壁赤外線調査 ドローンパイロットのご案内」表紙" loading="lazy">
+    </a>
+    <div>
+      <p class="partners-lead">外壁の赤外線調査・ドローン点検を手がける会社様向けに、協力会社・業務委託としてのご案内をまとめました。繁忙期の応援や補助・地上撮影、小規模なスポット案件から承ります。</p>
+      <ul class="partners-points">
+        <li><strong>ドローン・地上の赤外線撮影</strong><span>タイル浮き・漏水箇所の熱画像、可視画像、ハンディサーモでの補完撮影</span></li>
+        <li><strong>赤外線建物診断技能師・二等無人航空機操縦士</strong><span>目視外・夜間 限定解除／包括飛行許可・承認（全国）</span></li>
+        <li><strong>協力会社としてのお約束</strong><span>お客様への直接営業はいたしません。守秘義務・NDA締結にも対応します</span></li>
+      </ul>
+      <div class="hero-actions">
+        <a href="sales-deck.pdf" target="_blank" rel="noopener" class="hero-cta">営業資料を見る（PDF）</a>
+        <a href="sales-deck.pdf" download="イマドキインフォ_営業資料.pdf" class="hero-cta ghost">ダウンロード</a>
+      </div>
+      <p class="partners-meta">PDF・全10ページ・約2MB／2026年10月版</p>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
@@ -405,23 +452,24 @@
       <span class="service-icon">🚁</span>
       <p class="service-name">ドローン点検・飛行業務</p>
       <ul class="service-desc">
+        <li>赤外線ドローン（Mavic 3T／Matrice 4T）を案件に合わせて手配、御社機体での対応も可</li>
         <li>DJI Mini 4 Pro による空撮・外壁確認飛行</li>
         <li>対応エリア：名古屋市・愛知県全域</li>
         <li>二等無人航空機操縦士 技能証明取得済み（目視外・夜間 限定解除）</li>
-        <li>賠償責任保険（SORAPASS care）加入済み</li>
+        <li>賠償責任保険（業務用）1事故につき1億円・免責なし</li>
         <li>事業継続力強化計画 認定事業者（中部経済産業局）</li>
-        <li>赤外線点検会社との連携による診断対応も可</li>
+        <li>国交省 飛行許可・承認（包括／DID上空・目視外・30m未満の近接飛行）</li>
       </ul>
     </div>
     <div class="service-card">
       <span class="service-icon">🌡️</span>
-      <p class="service-name">赤外線点検・診断<span style="font-size:12px;color:var(--accent);margin-left:8px;">準備中・ご相談受付</span></p>
+      <p class="service-name">赤外線点検・診断</p>
       <ul class="service-desc">
         <li>太陽光パネルの赤外線点検（ホットスポット等の異常検出）</li>
         <li>建物外壁の赤外線診断（浮き・剥離の調査）</li>
         <li>第二種電気工事士として、点検から補修までの一貫対応</li>
         <li>地上用赤外線カメラ保有、ドローン・地上の両面から調査</li>
-        <li>赤外線建物診断技能師 講習修了・2026年10月受験</li>
+        <li>赤外線建物診断技能師（2026年10月 合格・認定登録）</li>
       </ul>
     </div>
     <div class="service-card">
@@ -465,12 +513,13 @@
     <li>DJI Mini 4 Pro による屋外飛行ログ記録中（累計64回・11.3時間・39.9km）</li>
     <li>古宇利大橋・郡上八幡城での空撮実績あり</li>
     <li>2026年8月 屋号「イマドキインフォ」で開業（青色申告）</li>
+    <li>適格請求書発行事業者 登録（登録番号 T6810003618032／令和8年11月1日登録）</li>
     <li>事業継続力強化計画 認定取得（2026年10月 中部経済産業局／2026中部継強単認第786号）</li>
     <li>二等無人航空機操縦士 技能証明取得（目視外・夜間 限定解除、2026年9月 免状交付）</li>
     <li>第二種電気工事士 保有</li>
-    <li>赤外線建物診断技能師 講習修了（2026年9月）・2026年10月受験</li>
+    <li>赤外線建物診断技能師 合格・認定登録（2026年10月）</li>
     <li>地上用赤外線カメラ（HIKMICRO）導入済み</li>
-    <li>賠償責任保険（SORAPASS care、損保ジャパン）加入済み</li>
+    <li>賠償責任保険（SORAPASS care 施設賠償責任保険・業務用／損保ジャパン）1事故につき1億円・免責なし　※被保険者証は別途ご提示可能です</li>
   </ul>
 
   <!-- 資格証明 -->
@@ -533,14 +582,14 @@
         <span class="menu-item-price">要相談</span>
       </div>
       <div class="menu-item">
-        <span class="menu-item-name">太陽光パネル赤外線点検（準備中）</span>
-        <span class="menu-item-price">ご相談受付</span>
+        <span class="menu-item-name">太陽光パネル赤外線点検</span>
+        <span class="menu-item-price">要相談</span>
       </div>
       <div class="menu-item">
-        <span class="menu-item-name">外壁赤外線診断（準備中）</span>
-        <span class="menu-item-price">ご相談受付</span>
+        <span class="menu-item-name">外壁赤外線調査（ドローン・地上）</span>
+        <span class="menu-item-price">要相談</span>
       </div>
-      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士・第二種電気工事士 保有／賠償責任保険加入済み<br>※事業継続力強化計画 認定事業者</p>
+      <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士・第二種電気工事士 保有／賠償責任保険（業務用・1億円・免責なし）加入済み<br>※事業継続力強化計画 認定事業者<br>※適格請求書（インボイス）発行可能　登録番号 T6810003618032</p>
     </div>
     <div class="menu-block">
       <p class="menu-block-title">🤖 AIコンテンツ支援</p>
@@ -567,8 +616,16 @@
     <p class="section-label">Contact</p>
     <h2 class="section-title">お問い合わせ</h2>
     <div class="divider" style="margin: 0 auto 32px;"></div>
-    <p class="contact-lead">ドローン飛行業務の下請け・赤外線点検・AI副業支援・その他お仕事のご相談は、XのDMまたはnoteよりお気軽にどうぞ。</p>
+    <p class="contact-lead">ドローン飛行業務の下請け・赤外線点検・AI副業支援・その他お仕事のご相談は、お電話・メール・XのDMよりお気軽にどうぞ。</p>
     <div class="contact-links">
+      <a class="contact-link" href="tel:07038645537">
+        📞 お電話
+        <span class="contact-link-label">070-3864-5537</span>
+      </a>
+      <a class="contact-link" href="mailto:hibinoaa@gmail.com">
+        ✉️ メール
+        <span class="contact-link-label">hibinoaa@gmail.com</span>
+      </a>
       <a class="contact-link" href="https://x.com/m_h8994" target="_blank">
         𝕏 Twitter DM
         <span class="contact-link-label">@m_h8994</span>
@@ -590,7 +647,7 @@
   <p class="footer-logo">イマドキインフォ</p>
   <div class="footer-cert">
     <img src="keizokuryoku-logo.jpg" alt="事業継続力強化計画 認定ロゴマーク" onerror="this.style.display='none'">
-    <span>事業継続力強化計画 認定事業者<br>2026中部継強単認第786号</span>
+    <span>事業継続力強化計画 認定事業者<br>2026中部継強単認第786号<br>適格請求書発行事業者 登録番号 T6810003618032</span>
   </div>
   <p class="footer-copy">© 2026 イマドキインフォ. All rights reserved.</p>
 </footer>
