@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>イマドキインフォ | AIとドローンで、現場をスマートに。</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,7 +50,9 @@
     letter-spacing: 0.08em;
     color: var(--accent);
     text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
   }
+  .nav-logo img { width: 34px; height: 34px; }
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a {
     color: var(--gray);
@@ -347,7 +351,8 @@
     justify-content: space-between;
     align-items: center;
   }
-  .footer-logo { font-size: 13px; color: var(--accent); font-weight: 700; }
+  .footer-logo { font-size: 13px; color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: 10px; }
+  .footer-logo img { width: 40px; height: 40px; }
   .footer-copy { font-size: 12px; color: var(--gray); }
   .footer-cert { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--gray); line-height: 1.5; }
   .footer-cert img { height: 72px; width: auto; }
@@ -398,7 +403,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">イマドキインフォ</a>
+  <a class="nav-logo" href="#"><img src="logo-emblem.png" alt="イマドキインフォ ロゴ">イマドキインフォ</a>
   <ul class="nav-links">
     <li><a href="#partners" class="nav-partner">協力会社様へ</a></li>
     <li><a href="#services">できること</a></li>
@@ -438,7 +443,7 @@
         <a href="sales-deck.pdf" target="_blank" rel="noopener" class="hero-cta">営業資料を見る（PDF）</a>
         <a href="sales-deck.pdf" download="イマドキインフォ_営業資料.pdf" class="hero-cta ghost">ダウンロード</a>
       </div>
-      <p class="partners-meta">PDF・全10ページ・約2MB／2026年10月版</p>
+      <p class="partners-meta">PDF・全15ページ・約0.9MB／2026年11月版</p>
     </div>
   </div>
 </section>
@@ -589,6 +594,10 @@
         <span class="menu-item-name">外壁赤外線調査（ドローン・地上）</span>
         <span class="menu-item-price">要相談</span>
       </div>
+      <div class="menu-item">
+        <span class="menu-item-name">PR動画制作（空撮）</span>
+        <span class="menu-item-price">要相談</span>
+      </div>
       <p class="menu-note">対応エリア：名古屋市・愛知県全域<br>※二等無人航空機操縦士・第二種電気工事士 保有／賠償責任保険（業務用・1億円・免責なし）加入済み<br>※事業継続力強化計画 認定事業者<br>※適格請求書（インボイス）発行可能　登録番号 T6810003618032</p>
     </div>
     <div class="menu-block">
@@ -609,7 +618,7 @@
     </div>
   </div>
   <div class="hero-actions" style="justify-content: center; margin-top: 40px">
-    <a href="flyer.pdf" target="_blank" rel="noopener" class="hero-cta">赤外線調査のご案内（A4チラシ・PDF）</a>
+    <a href="flyer.pdf" target="_blank" rel="noopener" class="hero-cta">赤外線調査のご案内（A4・4ページ・PDF）</a>
     <a href="flyer.pdf" download="イマドキインフォ_赤外線調査のご案内.pdf" class="hero-cta ghost">ダウンロード</a>
   </div>
 </section>
@@ -648,7 +657,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-logo">イマドキインフォ</p>
+  <p class="footer-logo"><img src="logo-emblem.png" alt="">イマドキインフォ</p>
   <div class="footer-cert">
     <img src="keizokuryoku-logo.jpg" alt="事業継続力強化計画 認定ロゴマーク" onerror="this.style.display='none'">
     <span>事業継続力強化計画 認定事業者<br>2026中部継強単認第786号<br>適格請求書発行事業者 登録番号 T6810003618032</span>
