@@ -343,6 +343,16 @@
   .license-card img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--gray2); display: block; }
   .license-card figcaption { margin-top: 10px; font-size: 12px; color: var(--gray); line-height: 1.6; }
 
+
+  /* ── LOGO STORY ── */
+  #logo-story { background: var(--bg2); }
+  .logo-story-wrap { display: flex; align-items: center; gap: 48px; max-width: 960px; }
+  .logo-story-wrap > img { width: 220px; height: 220px; flex-shrink: 0; }
+  .logo-story-list { list-style: none; display: grid; gap: 14px; margin-top: 8px; }
+  .logo-story-list li { font-size: 14px; color: var(--gray); line-height: 1.8; padding-left: 14px; border-left: 2px solid #F26B1D; }
+  .logo-story-list strong { color: var(--white); font-weight: 500; margin-right: 6px; }
+  @media (max-width: 768px) { .logo-story-wrap { flex-direction: column; gap: 28px; } .logo-story-wrap > img { width: 160px; height: 160px; } }
+
   /* ── FOOTER ── */
   footer {
     padding: 32px 40px;
@@ -620,6 +630,21 @@
   <div class="hero-actions" style="justify-content: center; margin-top: 40px">
     <a href="flyer.pdf" target="_blank" rel="noopener" class="hero-cta">赤外線調査のご案内（A4・4ページ・PDF）</a>
     <a href="flyer.pdf" download="イマドキインフォ_赤外線調査のご案内.pdf" class="hero-cta ghost">ダウンロード</a>
+  </div>
+</section>
+
+<!-- LOGO STORY -->
+<section id="logo-story">
+  <p class="section-label">About the Logo</p>
+  <h2 class="section-title">ロゴについて</h2>
+  <div class="logo-story-wrap">
+    <img src="logo-emblem.png" alt="イマドキインフォ エンブレムロゴ" loading="lazy">
+    <ul class="logo-story-list">
+      <li><strong>「i」とドローン</strong>イマドキインフォの頭文字「i」の点を、ドローンに置き換えました。空から現場を見る仕事の象徴です。</li>
+      <li><strong>サーモオレンジ</strong>赤外線カメラの熱画像で「温度が高い部分」を示す色。外壁の浮きや太陽光パネルの異常を見つけ出す、赤外線調査への想いを込めています。</li>
+      <li><strong>ネイビー</strong>点検・調査の仕事に欠かせない、誠実さと信頼の色です。</li>
+      <li><strong>エンブレム</strong>「DRONE INSPECTION ・ NAGOYA ・ SINCE 2026」— 名古屋で2026年に創業した、ドローン点検の専門事業者であることを示しています。</li>
+    </ul>
   </div>
 </section>
 
