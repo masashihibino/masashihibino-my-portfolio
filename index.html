@@ -62,6 +62,7 @@
     transition: color .2s;
   }
   .nav-links a:hover { color: var(--white); }
+  .nav-links a.nav-monitor { color: #F26A1B; font-weight: 700; }
 
   /* ── HERO ── */
   #hero {
@@ -353,6 +354,19 @@
   .logo-story-list strong { color: var(--white); font-weight: 500; margin-right: 6px; }
   @media (max-width: 768px) { .logo-story-wrap { flex-direction: column; gap: 28px; } .logo-story-wrap > img { width: 160px; height: 160px; } }
 
+
+  /* ── MONITOR CAMPAIGN ── */
+  #monitor { padding: 0 40px 24px; }
+  .monitor-banner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 36px; padding: 32px 36px; border: 1px solid rgba(242,106,27,0.55); border-radius: 12px; background: linear-gradient(120deg, rgba(242,106,27,0.14), rgba(91,75,196,0.10)); }
+  .monitor-banner > a img { width: 170px; display: block; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+  .monitor-tag { display: inline-block; background: #F26A1B; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 3px; letter-spacing: .08em; }
+  .monitor-title { font-size: 26px; font-weight: 700; color: var(--white); margin: 12px 0 8px; line-height: 1.4; }
+  .monitor-title span { color: #F26A1B; display: inline-block; }
+  .monitor-text { font-size: 14px; color: var(--gray); line-height: 1.8; margin-bottom: 18px; }
+  .monitor-banner .hero-cta { background: #F26A1B; border-color: #F26A1B; color: #fff; }
+  .monitor-banner .hero-cta.ghost { background: transparent; color: #F26A1B; border: 1px solid #F26A1B; }
+  @media (max-width: 768px) { #monitor { padding: 0 20px 16px; } .monitor-banner { flex-direction: column; align-items: flex-start; padding: 24px 20px; } .monitor-title { font-size: 21px; } }
+
   /* ── FOOTER ── */
   footer {
     padding: 32px 40px;
@@ -415,6 +429,7 @@
 <nav>
   <a class="nav-logo" href="#"><img src="logo-emblem.png" alt="イマドキインフォ ロゴ">イマドキインフォ</a>
   <ul class="nav-links">
+    <li><a href="#monitor" class="nav-monitor">無料モニター</a></li>
     <li><a href="#partners" class="nav-partner">協力会社様へ</a></li>
     <li><a href="#services">できること</a></li>
     <li><a href="#achievements">実績</a></li>
@@ -431,6 +446,22 @@
   <div class="hero-actions">
     <a href="#contact" class="hero-cta">お問い合わせはこちら →</a>
     <a href="#partners" class="hero-cta ghost">協力会社様向け 営業資料</a>
+  </div>
+</section>
+
+<!-- MONITOR CAMPAIGN -->
+<section id="monitor">
+  <div class="monitor-banner">
+    <a href="monitor.pdf" target="_blank" rel="noopener"><img src="monitor-cover.jpg" alt="赤外線外壁調査 無料モニター募集チラシ" loading="lazy"></a>
+    <div>
+      <span class="monitor-tag">先着3件限定・2027年1〜3月実施</span>
+      <p class="monitor-title">外壁の赤外線調査、<span>無料で試せます。</span></p>
+      <p class="monitor-text">赤外線ドローンと地上カメラで外壁の温度差を撮影し、浮きや雨水侵入の疑いを報告書にまとめます。名古屋市および近郊の中低層建物が対象です（出張費込み）。お申込みは「モニター希望」とお伝えください。</p>
+      <div class="hero-actions">
+        <a href="monitor.pdf" target="_blank" rel="noopener" class="hero-cta">募集チラシを見る（PDF）</a>
+        <a href="#contact" class="hero-cta ghost">申し込む・相談する</a>
+      </div>
+    </div>
   </div>
 </section>
 
